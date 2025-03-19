@@ -3,66 +3,63 @@
 Group: KI-47
 Student: Boiko Yurii
 Variant: 3
-HW i-face: I2C
-Game: chrome dragon game
-Data driven format: BINARY
 
 Project: Messenger with translating(Bachelor work)
 
-# Інструкція для завантаження і запуску проекту
-Щоб заранити проект потрібно дістати його з репозиторію. Потім скачати NodeJs версії не нижче 14 і VS Code або WebStorm. Бажано налаштувати NodeJs, щоб можна було через термінал запустити скачування пакетів. Потрібно відкрити проект через Vs Code чи WebStorm і в терміналі (я використовую термінал cmd) прописати перше команду (npm install або npm i). Після  того як всі пакети встановляться, слід прописати команду (ng serve -o) - це потрібно для того, щоб запустити проект на локальному сервері.
+# Instructions for downloading and launching the project
+To build a project, you need to get it from the repository. Then download NodeJs version no lower than 14 and VS Code or WebStorm. It is advisable to configure NodeJs so that you can start downloading packages through the terminal. You need to open the project through Vs Code or WebStorm and in the terminal (I use the cmd terminal) write the first command (npm install or npm i). After all the packages are installed, you should write the command (ng serve -o) - this is necessary in order to run the project on the local server.
 
 # Messanger v1.0:
- - Логінування відбувається з використанням email та password. На поля накладена валідація. Якщо поля заповнено не вірно, вискочить вікно з відповідною інформацією. Щоб увійти, потрібно натиснути на кнопку "Sign In". (Email та password для тестування програми: email - user@gmail.com, passwoed - qwerty123);
- - В нас є можливість змінити логінування на реєстрацію. Щоб це зробити клікаємо на посилання "Registration", що знаходиться під кнопкою "Sign In". Наше вікно зміниться відповідно до реєстрації. Ми маємо 3 поля для вводу: username(ім'я користувача), email(електронна скринька коричтувача) та password(пароль користувача). Щоб увійти, потрібно натиснути на кнопку "Sign Up"; Після натискання на кнопку вас перекине на освновну сторінку, тобто автоматично виконується вхід.
- -  Увійшовши до системи, ви побачите головну сторінку, яка розділена на 2 блоки: блок з контактами юзера та блок з вибраним юзером для написання повідомлень. 
- - Блок з контактами юзера. В даному блоці ми маємо випадаюче меню, поле для пошуку контактів та блок з контактами користувача. При натисканні на кнопку меню, з'являється випадаюче меню. На даному вікні ми маємо знову ж таки 2 секції(head та body). В head-і є:
-   * кнопка "<" - закриває випадаюче меню;
-   * фото юзера а також його nickname;
-   * кнопка "Редагувати" - відкриває нове вікно для редагування прсональних даних;
-   * кнопка "Вихід" - для виходу з системи;
- В body:
-   * "Налаштування" - кнопка для відривання вікна з додатковими налаштуваннями(На даний момент не працює);
-   * "Мова" - кнопка для вибору мови. Якщо натиснути з'явиться блок з вибором: EN або UA(EN по замовчуванню).
-   * "Розмір шрифту" - кнопка для редагування розмірів тексту(На даний момент не працює);
-   * "Темний режим" - кнопка для зміни режиму(теми) на темну(Світла тема по замовчуванню).
-  Поле для пошуку контактів. Як тільки ми почнемо писати, в блоці котактів користувача будуть відображатися доступні контакти. Тобто буде відбуватися фільтрування. Якщо юзер не має контактів, йому будуть підтягуватися всі доступні контакти.(Функціонал додавання контакту ще не реалізований). На даний момент, якщо ми щось напишемо в полі вводу, то будуть відображатись всі доступні користувачі(крім нас).
- - Блок з вибраним юзером для написання повідомлень. Знову ж таки має 2 секції: head та body. В head ми можемо бачити фото нашого контакту і його nickname. Якщо натиснути на head( весь верхній блок), то відкриється вікно з інофмацією про даного користувача. Body це поле з історією повідомлень, ті що зліва це від даного контакту те що зліва це наші повідомлення. Під повідомленням є дата та час відправлення повідомлення. Знизу є поле для вводу повідомлень. Даний функціонал ще не реалізований. Також дані в body і взагалі весь цей блок є по дефолту і не підтягується при виборі якогось користувача, а зроблений щоб ознайомитись з зовнішним виглядом.
+ - Login is done using email and password. Validation is applied to the fields. If the fields are filled in incorrectly, a window with the appropriate information will pop up. To log in, you need to click on the "Sign In" button. (Email and password for testing the program: email - user@gmail.com, password - qwerty123);
+- We have the opportunity to change the login to registration. To do this, click on the "Registration" link, which is located under the "Sign In" button. Our window will change according to registration. We have 3 fields for entry: username (user name), email (administrator's email) and password (user password). To log in, you need to click on the "Sign Up" button; After clicking on the button, you will be redirected to the main page, that is, you will be automatically logged in.
+- After logging in, you will see the main page, which is divided into 2 blocks: a block with user contacts and a block with a selected user for writing messages.
+- Block with user contacts. In this block we have a drop-down menu, a field for searching for contacts and a block with user contacts. When you click on the menu button, a drop-down menu appears. In this window we have again 2 sections (head and body). In the head there are:
+    * button "<" - closes the drop-down menu;
+    * user photo and his nickname;
+    * button "Edit" - opens a new window for editing personal data;
+    * button "Logout" - to log out of the system;
+  In the body:
+    * "Settings" - button for opening a window with additional settings (currently not working);
+    * "Language" - button for selecting a language. If you click, a block with a choice will appear: EN or UA (EN by default).
+    * "Font size" - button for editing text size (currently not working);
+    * "Dark mode" - a button to change the mode (theme) to dark (Light theme by default).
+  Field for searching for contacts. As soon as we start writing, available contacts will be displayed in the user's contact block. That is, filtering will occur. If the user has no contacts, all available contacts will be pulled up. (The functionality of adding a contact has not yet been implemented). At the moment, if we write something in the input field, all available users will be displayed (except us).
+- Block with the selected user for writing messages. Again, it has 2 sections: head and body. In the head we can see a photo of our contact and his nickname. If you click on head (the entire upper block), a window with information about this user will open. Body is a field with the message history, those on the left are from this contact, those on the left are our messages. Under the message is the date and time the message was sent. Below is a field for entering messages. This functionality has not yet been implemented. Also, the data in the body and in general this entire block is by default and is not pulled up when a user selects it, but is made to familiarize yourself with the appearance.
 
  # Messanger v1.0 unit-tests
-  - До даної версії було зроблені unit tests, покрито практично 80% всього проекту, включаючи в себе guard, service, pipe & components.
-  - Щоб запустити тестування потрібно у терміналі прописати ng test --code-coverage. Після того як тести пройшли, знизу буде показано загальний результат покриття тестами. А щоб побачити що і як покрито, треба відкрити через браузер оцей файл cstd-boikoyurii-2122\coverage\taskChat\index.html і побачите всю картину тестів.
+- Unit tests were made before this version, almost 80% of the entire project was covered, including guard, service, pipe & components.
+- To run testing, you need to write ng test --code-coverage in the terminal. After the tests have passed, the overall result of the test coverage will be shown below. And to see what and how is covered, you need to open this file cstd-boikoyurii-2122\coverage\taskChat\index.html in a browser and you will see the whole picture of the tests.
 
  # Messanger v1.1 
- - До даної версії було додано новий функціонал:
-  * додавання користувачів у свої контакти (біля імені вибраного контакту тепер є кнопка "Додати до контактів"). Якщо натиснути на відповідну кнопку, то цей користувач буде доданий до ваших контактів і перенесений з блоку "Інші користувачі" в "Чати", а також кнопка додавання зникне.
-  * відображення контактів користувача. Тепер маємо 2 блоки користувачів - наші контакти та усі користувачі, які не є нашиси контактами.
-  * тепер можна змінювати вибраного користувача, і його дані будуть підтягуватися. 
-  * при виборі певного користувача, в урлі прописується nickname вибраного користувача. Якщо ніхто не вибраний(тобто урла закінчується main/), то вибирається або перший контакт(якщо контакти є), або перший інший користувач.
- - Також було дописано Unit-тести для нового функціоналу. Зараз проект покрито десь на 65-70%, що досить добре.
- - Також було відформатовано і відредаговано деякі частини коду.
+- New functionality has been added to this version:
+* adding users to your contacts (there is now an "Add to contacts" button next to the name of the selected contact). If you click on the corresponding button, this user will be added to your contacts and moved from the "Other users" block to "Chats", and the add button will disappear.
+* displaying user contacts. Now we have 2 user blocks - our contacts and all users who are not our contacts.
+* now you can change the selected user, and his data will be pulled up.
+* when selecting a specific user, the nickname of the selected user is written in the URL. If no one is selected (i.e. the URL ends with main/), then either the first contact (if there are contacts) or the first other user is selected.
+- Unit tests for the new functionality have also been added. Now the project is covered by about 65-70%, which is quite good.
+- Some parts of the code have also been formatted and edited.
 
- # Messanger v2.0 БД
- - В даному проекті використовується нереляційна база даних Firabase.
- - Firebase — це набір інструментів для «створювання, покращення та розвитку вашого додатка», а інструменти, які він надає, охоплюють значну частину сервісів, які розробникам зазвичай доводиться створювати самостійно, але насправді вони не хочуть створювати, оскільки вони краще зосередитися на самому додатку. Це включає такі речі, як аналітика, аутентифікація, бази даних, конфігурація, зберігання файлів, push-повідомлення, і список можна продовжувати. Служби розміщуються в хмарі та масштабуються без будь-яких зусиль з боку розробника.
- - Для підключення Firebase до нашого проекту треба в файл app.module.ts заімпортувати відповідні модулі(AngularFireModule - для загального підключення БД, AngularFirestoreModule - для  підключення зберігання даних в колекціях, AngularFireStorageModule - для зберігання фото і інших файлів у бд, AngularFireAuthModule - для роботи з логінуванням і реєстрацією).
- - Для даного проекту було створено 1 колекцію (users) - це набір користувачів нашої системи. Кожен користувач є записаний в колекцію за своїм id. В кожного користувача є такі поля: email, image, userName, contacts, id. Розберемо кожен детально. 
-  * email - електронна адреса користувача, записуєтсья при реєстрації, і може бути змінена;
-  * image - фото користувача, яке буде відображатись для інших користувачів та в самого юзера, може бути змінена;
-  * userName - ім'я користувача (юзернейм), яке буде відображатись для інших користувачів, може бути змінений;
-  * id - ідентифікатор, який виділяє даного користувача серед інших, і по якому він розпізнається в системі(незмінний)
-  * contacts - набір контактів користувача - це по суті масив інших користувачів
- - Усі запити до бази даних у нас відбуваються у файлі data.service.ts.
+ # Messanger v2.0 BD
+- This project uses the non-relational database Firabase.
+- Firebase is a set of tools for "building, improving, and growing your app," and the tools it provides cover a significant portion of the services that developers usually have to build themselves, but in reality they don't want to build because they'd rather focus on the app itself. This includes things like analytics, authentication, databases, configuration, file storage, push notifications, and the list goes on. The services are hosted in the cloud and scale without any effort on the developer's part.
+- To connect Firebase to our project, we need to import the appropriate modules into the app.module.ts file (AngularFireModule - for general database connection, AngularFirestoreModule - for connecting data storage in collections, AngularFireStorageModule - for storing photos and other files in the database, AngularFireAuthModule - for working with login and registration).
+- For this project, 1 collection (users) was created - this is a set of users of our system. Each user is recorded in the collection by their id. Each user has the following fields: email, image, userName, contacts, id. Let's analyze each in detail.
+* email - the user's email address, recorded during registration, and can be changed;
+* image - the user's photo, which will be displayed for other users and for the user himself, can be changed;
+* userName - the user's name (username), which will be displayed for other users, can be changed;
+* id - the identifier that distinguishes this user from others, and by which he is recognized in the system (immutable)
+* contacts - a set of user contacts - this is essentially an array of other users
+- All requests to the database for us occur in the data.service.ts file.
 
  # Messanger v2.1 
-  - До даної версії було додано новий функціонал:
-  * додавання користувачів у свої контакти (біля імені вибраного контакту тепер є кнопка "Додати до контактів"). Тепер це додавання працює в дві сторони. Тобто якщо ви додали когось в контакти, то ви в нього теж автоматично стаєте контактом.
-  * якщо ви напишете юзеру що не є вашим контактом, то ви його додасте в контакти автоматично.
-  * надсилання повідомлень в реальному часі. Тепер можна спілкуватися з іншими юзерами в режимі реального часу.
-  * відображення надісланих повідомлень.
- - Також було відредаговано стилізацію певних елементів, а також було об'єднано дві компоненти в одну.
- - Також було дописано Unit-тести для нового функціоналу. Зараз проект покрито десь на 60%, що досить добре.
- - Також було відформатовано і відредаговано деякі частини коду.
+ - New functionality has been added to this version:
+* adding users to your contacts (there is now an "Add to contacts" button next to the name of the selected contact). Now this addition works in both directions. That is, if you add someone to your contacts, you also automatically become a contact in them.
+* if you write to a user who is not your contact, you will add him to your contacts automatically.
+* sending messages in real time. Now you can communicate with other users in real time.
+* displaying sent messages.
+- The styling of certain elements has also been edited, and two components have been combined into one.
+- Unit tests for the new functionality have also been added. Now the project is about 60% covered, which is quite good.
+- Some parts of the code have also been formatted and edited.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
